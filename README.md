@@ -1,5 +1,5 @@
 # ToastUtil
-**ToastUtil which fixes the BadTokenException happened on the device 7.x while showing Toast which will cause your app to crash, just like this<br>**
+**ToastUtil which fixes the "WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@ba9eb53 is not valid; is your activity running?" happened on the device 7.x while showing Toast which will cause your app crashing, just like this<br>**
 ```java 
 android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@ba9eb53 is not valid; is your activity running?
 at android.view.ViewRootImpl.setView(ViewRootImpl.java:679)
@@ -154,8 +154,8 @@ We can reappear the case easily with Thread.sleep() in main thread after showing
                 }
 ```
 As we can see at above code, the main thread will just sleep 10 seconds which will block the main thread.
-The demo UI is designed as bolew:
-
+The demo UI is designed as bolew:<br>
+![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/main_test_ui.png)<br>
 And the code runs as below when we click the first button,it just shows the toast with System Toast:
 ```java
 btnUnfixed.setOnClickListener(new View.OnClickListener() {
@@ -171,8 +171,8 @@ btnUnfixed.setOnClickListener(new View.OnClickListener() {
             }
         });
 ```
-And when we click the first button and after 10 seconds, the app just crashed as shown below:
-
+And when we click the first button and after 10 seconds, the app just crashed as shown below:<br>
+![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/toast_without_fix.png)<br>
 And the code runs as below when we click the second button, it showed the toast with ToastUtil which we have fit the System bug above:
 ```java
 btnFixed.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +189,8 @@ btnFixed.setOnClickListener(new View.OnClickListener() {
         });
 ```
 And when we click the second button and after 10 seconds, the app runs normally and just catch the Exception to avoid the app crashing:
-
+![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/toast_fix_catch.png)
+![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/toast_fix_catch1.png)
 ## Thanks
 Thanks for the detail analysis and ideas from QQ Music Technology Team, Details can be seen in the following articles:<br>
 [[Android] Toast问题深度剖析(一)](http://www.cnblogs.com/qcloud1001/p/8421356.html)<br>
