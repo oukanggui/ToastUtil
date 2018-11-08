@@ -27,7 +27,7 @@ allprojects {
 Second, add the dependency in your module build.gradle:
 ```java
 dependencies {
-	implementation 'com.github.oukanggui:ToastUtil:Tag'
+	implementation 'com.github.oukanggui:ToastUtil:v1.0'
      }
 ```
 ## How the BadTokenException occurs
