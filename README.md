@@ -18,17 +18,17 @@ at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:783)
 First, add JitPack repository in your root build.gradle at the end of repositories:
 ```java
 allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 		}
 	}
 ```
 Second, add the dependency in your module build.gradle:
 ```java
 dependencies {
-	        implementation 'com.github.oukanggui:ToastUtil:Tag'
-	}
+	implementation 'com.github.oukanggui:ToastUtil:Tag'
+     }
 ```
 ## How the BadTokenException occurs
 As we can see the invoked stack information on the above Exception message,the Exception occurs while the Hanlder inside TN receives the message and invokes Toast$TN.handleShow() mothed, the implementation of Toast$TN.handleShow() mothed is different from different Android SDK version<br>
