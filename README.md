@@ -31,7 +31,7 @@ dependencies {
      }
 ```
 ## How the BadTokenException occurs
-As we can see the invoked stack information on the above Exception message,the Exception occurs while the Hanlder inside TN receives the message and invokes Toast$TN.handleShow() mothed, the implementation of Toast$TN.handleShow() mothed is different from different Android SDK version<br>
+As we can see the invoked stack information on the above Exception message,the Exception occurs while the Hanlder inside TN receives the message and invokes Toast$TN.handleShow() method, the implementation of Toast$TN.handleShow() method is different from different Android SDK version<br>
   **The source system code in Android 7.x:**
 ```java
 public void handleShow(IBinder windowToken) {
@@ -208,6 +208,6 @@ And when we click the second button and after 10 seconds, the app runs normally 
 ![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/toast_fix_catch.png)
 ![](https://github.com/oukanggui/ToastUtil/blob/master/app/src/main/assets/toast_fix_catch1.png)
 ## Thanks
-Thanks for the detail analysis and ideas from QQ Music Technology Team, Details can be seen in the following articles:<br>
+Thanks for the detail analysis and ideas from QQ Music Technology Team, details can be seen in the following articles:<br>
 [[Android] Toast问题深度剖析(一)](http://www.cnblogs.com/qcloud1001/p/8421356.html)<br>
 [[Android] Toast问题深度剖析(二)](http://www.itboth.com/d/jiY73qyeAzei/api-java-toast-android)<br>
