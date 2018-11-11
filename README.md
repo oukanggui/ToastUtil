@@ -1,4 +1,5 @@
 # ToastUtil
+[中文版请见](https://blog.csdn.net/okg0111/article/details/83957680)
 **ToastUtil which fixes the "WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@ba9eb53 is not valid; is your activity running?" happened on the device 7.x while showing Toast which will cause your app crashing, just like this<br>**
 ```java 
 android.view.WindowManager$BadTokenException: Unable to add window -- token android.os.BinderProxy@ba9eb53 is not valid; is your activity running?
