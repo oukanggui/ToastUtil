@@ -109,6 +109,8 @@ As analyzed above, we can catch the Exception which threw in Toast$TN.handleShow
  ```
  And then we need to use SafelyHandlerWarpper object to wrap Toast$TN$Hanlder object and replace the Toast$TN$Hanlder object with reflecting, as the method hookToast() shown below:
 ```java
+    private static final String FIELD_NAME_TN = "mTN";
+    private static final String FIELD_NAME_HANDLER = "mHandler";
    /**
      * Hook Toast,fix the BadTokenException happened on the device 7.x while showing Toast which will cause your app to crash
      *
